@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+ruby '2.3.0'
 
 gem "active_type", ">= 0.3.2"
 gem "autoprefixer-rails", ">= 5.0.0.1"
@@ -9,17 +10,19 @@ gem "coffee-rails", "~> 4.1.0"
 gem "dotenv-rails", ">= 2.0.0"
 gem "font-awesome-rails"
 gem "jquery-rails"
-gem "jquery-turbolinks"
+#gem "jquery-turbolinks"
 gem "mail", ">= 2.6.3"
 gem "marco-polo"
 gem "pg", "~> 0.18"
 gem "rails", "4.2.4"
 gem "redis-namespace"
 gem "sass-rails", "~> 5.0"
+gem "uglifier", ">= 1.3.0"
 gem "secure_headers", "~> 3.0"
 gem "sidekiq"
 gem "sinatra", ">= 1.3.0", :require => false
 gem "turbolinks", ">= 2.5.2"
+gem "active_model_serializers"
 
 group :production, :staging do
   gem "postmark-rails"
@@ -70,4 +73,8 @@ group :test do
   gem "shoulda-context"
   gem "shoulda-matchers", ">= 3.0.1"
   gem "test_after_commit"
+end
+
+group :doc do
+  gem 'sdoc', require: false
 end
